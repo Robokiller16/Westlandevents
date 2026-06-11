@@ -6,11 +6,7 @@ Statische bingo tracker voor Westland OSRS events.
 
 Open `index.html` direct in de browser of host de map via GitHub Pages.
 
-Team logins:
-
-- `beren` / `bingo2026`
-- `flamingos` / `bingo2026`
-- `snoesjes` / `bingo2026`
+Vraag de captains om de team-login en code.
 
 ## GitHub Pages
 
