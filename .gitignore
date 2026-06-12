@@ -1,0 +1,13 @@
+# Local database credentials
+www/api/config.php
+subsites/*/api/config.php
+
+# Runtime/user data
+logs/
+tmp/
+subsites/*/api/uploads/
+www/api/uploads/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db

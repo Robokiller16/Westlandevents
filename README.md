@@ -1,25 +1,12 @@
-# Westland OSRS Bingo
+# Westland Events
 
-Statische bingo tracker voor Westland OSRS events.
+Bronbestanden voor de Westland OSRS sites op TransIP.
 
-## Gebruik
+- `www/` bevat de hoofdsite voor `osrs-westland.nl`.
+- `subsites/Bingo.osrs-westland.nl/` bevat de Bingo tracker.
 
-Open `index.html` direct in de browser of host de map via GitHub Pages.
+## Deploy naar TransIP
 
-Vraag de captains om de team-login en code.
+Upload de inhoud van deze mappen naar dezelfde paden op TransIP.
 
-## GitHub Pages
-
-Zet GitHub Pages aan via:
-
-1. Repository `Settings`
-2. `Pages`
-3. Source: `Deploy from a branch`
-4. Branch: `main`
-5. Folder: `/root`
-
-Daarna is de site beschikbaar via de GitHub Pages URL van de repository.
-
-## Let op
-
-De voortgang wordt nu lokaal opgeslagen in de browser via `localStorage`. Voor gedeelde live voortgang tussen meerdere spelers is later een kleine backend of database nodig.
+Let op: `config.php` bestanden met databasegegevens staan bewust niet in GitHub. Gebruik `config.example.php` als template en vul de echte waarden alleen op de hosting in.

@@ -1,0 +1,17 @@
+DirectoryIndex index.php
+Options -Indexes
+
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "DENY"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "same-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+<FilesMatch "^(config|config\.example|schema)\.(php|sql)$">
+  Require all denied
+</FilesMatch>
+
+RewriteEngine On
+RewriteRule ^admin/?$ index.php?page=admin [L,QSA]
+RewriteRule ^portal/?$ index.php?page=portal [L,QSA]
