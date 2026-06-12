@@ -7,17 +7,19 @@
     <style>
       :root {
         color-scheme: dark;
-        --bg: #101314;
-        --panel: #171b1e;
-        --panel-2: #20262a;
-        --line: #343c40;
-        --text: #f5efe0;
-        --muted: #b8aea0;
-        --gold: #e2b95b;
-        --green: #66c98f;
-        --red: #d96962;
-        --blue: #75b7d6;
-        --purple: #ba94e3;
+        --bg: #07100d;
+        --panel: #111a18;
+        --panel-2: #172522;
+        --panel-3: #0d1714;
+        --line: #2f4942;
+        --text: #f4f1dd;
+        --muted: #b8c4b8;
+        --gold: #d7b44a;
+        --green: #54b172;
+        --red: #d9635d;
+        --blue: #6fb7d7;
+        --purple: #9d8bd8;
+        --rune: #7ec8df;
         --shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
       }
 
@@ -29,8 +31,9 @@
         margin: 0;
         min-height: 100vh;
         background:
-          radial-gradient(circle at 14% 0%, rgba(226, 185, 91, 0.2), transparent 30%),
-          linear-gradient(135deg, rgba(102, 201, 143, 0.08), transparent 30%),
+          radial-gradient(circle at 14% 0%, rgba(215, 180, 74, 0.18), transparent 30%),
+          linear-gradient(135deg, rgba(84, 177, 114, 0.12), transparent 30%),
+          repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 16px),
           var(--bg);
         color: var(--text);
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -60,9 +63,9 @@
         place-items: center;
         padding: 18px;
         background:
-          radial-gradient(circle at 20% 12%, rgba(226, 185, 91, 0.2), transparent 34%),
-          linear-gradient(135deg, rgba(102, 201, 143, 0.1), transparent 34%),
-          rgba(10, 12, 13, 0.96);
+          radial-gradient(circle at 20% 12%, rgba(215, 180, 74, 0.18), transparent 34%),
+          linear-gradient(135deg, rgba(84, 177, 114, 0.14), transparent 34%),
+          rgba(5, 11, 9, 0.97);
       }
 
       .login-screen.hidden {
@@ -100,7 +103,7 @@
         min-height: 42px;
         border: 1px solid var(--line);
         border-radius: 8px;
-        background: #0d0f10;
+        background: #07100d;
         color: var(--text);
         padding: 0 12px;
       }
@@ -132,9 +135,9 @@
         overflow: hidden;
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         background:
-          linear-gradient(180deg, rgba(16, 19, 20, 0.08), rgba(16, 19, 20, 0.92)),
-          repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 78px),
-          linear-gradient(120deg, #25302a, #171b1e 45%, #2b2418);
+          linear-gradient(180deg, rgba(7, 16, 13, 0.1), rgba(7, 16, 13, 0.94)),
+          repeating-linear-gradient(90deg, rgba(244, 241, 221, 0.045) 0 1px, transparent 1px 78px),
+          linear-gradient(120deg, #163126, #0f1b18 48%, #10253a);
       }
 
       .hero::before {
@@ -144,7 +147,7 @@
         height: 210px;
         background:
           linear-gradient(45deg, transparent 0 44%, rgba(226, 185, 91, 0.55) 45% 55%, transparent 56%),
-          linear-gradient(-45deg, transparent 0 44%, rgba(102, 201, 143, 0.35) 45% 55%, transparent 56%);
+          linear-gradient(-45deg, transparent 0 44%, rgba(126, 200, 223, 0.38) 45% 55%, transparent 56%);
         background-size: 74px 74px;
         opacity: 0.24;
       }
@@ -157,11 +160,11 @@
         width: clamp(150px, 22vw, 260px);
         aspect-ratio: 1;
         background:
-          linear-gradient(#f4d47d 0 0) 50% 8% / 54% 16% no-repeat,
-          linear-gradient(#7d4d2f 0 0) 50% 26% / 74% 28% no-repeat,
-          linear-gradient(#d0a13d 0 0) 50% 54% / 82% 48% no-repeat,
-          linear-gradient(#6d3c22 0 0) 50% 86% / 58% 18% no-repeat;
-        clip-path: polygon(50% 0, 92% 21%, 82% 88%, 50% 100%, 18% 88%, 8% 21%);
+          linear-gradient(#9fe7f4 0 0) 50% 12% / 42% 14% no-repeat,
+          linear-gradient(#d7b44a 0 0) 50% 28% / 62% 18% no-repeat,
+          linear-gradient(#5cb678 0 0) 50% 52% / 78% 42% no-repeat,
+          linear-gradient(#284d46 0 0) 50% 84% / 58% 22% no-repeat;
+        clip-path: polygon(50% 0, 88% 18%, 80% 82%, 50% 100%, 20% 82%, 12% 18%);
         filter: drop-shadow(0 26px 38px rgba(0, 0, 0, 0.45));
         image-rendering: pixelated;
         opacity: 0.86;
@@ -240,7 +243,7 @@
         gap: 12px;
         align-items: center;
         padding: 12px 0;
-        background: linear-gradient(180deg, var(--bg), rgba(16, 19, 20, 0.88));
+        background: linear-gradient(180deg, var(--bg), rgba(7, 16, 13, 0.9));
       }
 
       .tabs,
@@ -264,8 +267,8 @@
 
       .tab.active,
       .chip.active {
-        border-color: rgba(226, 185, 91, 0.72);
-        background: rgba(226, 185, 91, 0.14);
+        border-color: rgba(215, 180, 74, 0.72);
+        background: rgba(215, 180, 74, 0.14);
         color: #ffe5a3;
       }
 
@@ -282,7 +285,7 @@
         width: min(100%, 420px);
         border: 1px solid var(--line);
         border-radius: 8px;
-        background: #0d0f10;
+        background: #07100d;
         color: var(--text);
         padding: 0 14px;
       }
@@ -301,7 +304,7 @@
       aside,
       .panel {
         border: 1px solid var(--line);
-        background: rgba(23, 27, 30, 0.92);
+        background: rgba(17, 26, 24, 0.94);
         border-radius: 8px;
         box-shadow: var(--shadow);
       }
@@ -340,7 +343,7 @@
       .team-title {
         padding: 12px;
         border-bottom: 1px solid var(--line);
-        background: rgba(255, 255, 255, 0.04);
+        background: rgba(126, 200, 223, 0.05);
       }
 
       .team-title strong,
@@ -389,7 +392,7 @@
       .boss-card,
       .drop-card {
         border: 1px solid var(--line);
-        background: rgba(32, 38, 42, 0.92);
+        background: rgba(23, 37, 34, 0.94);
         border-radius: 8px;
       }
 
@@ -410,7 +413,7 @@
         height: 9px;
         margin-top: 14px;
         border-radius: 999px;
-        background: #0d0f10;
+        background: #07100d;
         overflow: hidden;
       }
 
@@ -428,7 +431,7 @@
 
       .style-section {
         border: 1px solid var(--line);
-        background: rgba(23, 27, 30, 0.82);
+        background: rgba(17, 26, 24, 0.84);
         border-radius: 8px;
         overflow: hidden;
       }
@@ -541,7 +544,7 @@
         margin-top: 10px;
         border: 1px solid var(--line);
         border-radius: 8px;
-        background: #101314;
+        background: #07100d;
         color: var(--text);
         padding: 8px 10px;
       }
@@ -552,7 +555,7 @@
         margin-top: 8px;
         border: 1px solid var(--line);
         border-radius: 8px;
-        background: #101314;
+        background: #07100d;
         color: var(--text);
         padding: 7px 10px;
         font-size: 0.88rem;
@@ -570,9 +573,25 @@
 
       .admin-grid {
         display: grid;
-        grid-template-columns: minmax(260px, 380px) 1fr;
+        grid-template-columns: 1fr;
         gap: 12px;
         align-items: start;
+      }
+
+      .admin-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .admin-pane {
+        display: none;
+      }
+
+      .admin-pane.active {
+        display: grid;
+        gap: 12px;
       }
 
       .admin-form {
@@ -596,6 +615,11 @@
         background: var(--panel-2);
       }
 
+      .admin-user.processing {
+        opacity: 0.65;
+        pointer-events: none;
+      }
+
       .claim-shot {
         max-width: 180px;
         border-radius: 8px;
@@ -616,9 +640,9 @@
         grid-template-rows: repeat(6, 1fr);
         gap: 5px;
         padding: 10px;
-        border: 1px solid #5c5444;
+        border: 1px solid #42685e;
         border-radius: 6px;
-        background: #373126;
+        background: #16231f;
         justify-self: center;
       }
 
@@ -627,9 +651,9 @@
         position: relative;
         display: grid;
         place-items: center;
-        border: 1px solid #554d40;
+        border: 1px solid #42685e;
         border-radius: 5px;
-        background: rgba(20, 18, 15, 0.32);
+        background: rgba(7, 16, 13, 0.42);
         overflow: hidden;
       }
 
@@ -708,7 +732,7 @@
         border: 1px solid var(--line);
         border-radius: 8px;
         padding: 10px;
-        background: #121618;
+        background: var(--panel-3);
       }
 
       .gear-tier strong {
@@ -946,12 +970,20 @@
                   <p class="note">Keur drop-claims goed, beheer extra users en maak extra admins aan voor verificatie.</p>
                 </div>
                 <div class="teams admin-grid">
-                  <div class="admin-form">
+                  <div class="admin-tabs" id="adminTabs">
+                    <button class="tab active" data-admin-pane="claimsPane">Claims</button>
+                    <button class="tab" data-admin-pane="dropsPane">Vakjes</button>
+                    <button class="tab" data-admin-pane="adminsPane">Admins</button>
+                    <button class="tab" data-admin-pane="usersPane">Users</button>
+                  </div>
+                  <div class="admin-form admin-pane active" id="claimsPane">
                     <h3>Open claims</h3>
                     <button class="chip" id="refreshClaimsBtn">Claims verversen</button>
                     <div class="admin-list" id="adminClaims"></div>
                     <h3>Meest waardevolle items</h3>
                     <p class="note">Beste aanpak: voeg per claim een GP-waarde toe bij approval. Dan kunnen we een aparte ranking maken op hoogste itemwaarde, zonder de normale bingo-score te vervuilen.</p>
+                  </div>
+                  <div class="admin-form admin-pane" id="dropsPane">
                     <h3>Vakje toevoegen</h3>
                     <input class="gear-input" id="newDropItem" placeholder="Item of taak" />
                     <input class="gear-input" id="newDropSource" placeholder="Boss/activity bron" />
@@ -966,17 +998,21 @@
                     <input class="gear-input" id="newDropSlot" placeholder="Slot/category" />
                     <input class="gear-input" id="newDropPoints" placeholder="Punten" type="number" min="1" value="1" />
                     <button class="tab active" id="addDropBtn">Vakje toevoegen</button>
+                  </div>
+                  <div class="admin-form admin-pane" id="adminsPane">
                     <h3>Extra admin</h3>
                     <input class="gear-input" id="newAdminLogin" placeholder="Nieuwe admin login" />
                     <input class="gear-input" id="newAdminPassword" placeholder="Nieuw admin wachtwoord" type="password" />
                     <button class="tab active" id="addAdminBtn">Admin toevoegen</button>
                     <div class="admin-list" id="adminList"></div>
+                  </div>
+                  <div class="admin-form admin-pane" id="usersPane">
                     <h3>Extra speler</h3>
                     <input class="gear-input" id="newUserName" placeholder="Nieuwe usernaam" />
                     <select class="gear-input" id="newUserTeam"></select>
                     <button class="tab active" id="addUserBtn">User koppelen</button>
+                    <div class="admin-list" id="adminUserList"></div>
                   </div>
-                  <div class="admin-list" id="adminUserList"></div>
                 </div>
               </div>
             </section>
@@ -1344,6 +1380,7 @@
       let currentRole = sessionStorage.getItem(SESSION_ROLE_KEY) || "";
       let adminManagedTeamId = currentTeamId || teams[0].id;
       let admins = [];
+      const processingClaims = new Set();
 
       function normalizePlayer(value) {
         return String(value || "")
@@ -1584,8 +1621,12 @@
         return teams.flatMap((team) =>
           drops
             .map((drop) => ({ team, drop, claim: pendingFor(drop, team.id) }))
-            .filter((item) => item.claim && !isDropComplete(item.drop, item.team.id)),
+            .filter((item) => item.claim && !isDropComplete(item.drop, item.team.id) && !processingClaims.has(claimKey(item.team.id, item.drop.id))),
         );
+      }
+
+      function claimKey(teamId, dropId) {
+        return `${teamId}:${dropId}`;
       }
 
       function renderHeroStats() {
@@ -2006,25 +2047,41 @@
       }
 
       async function claimAction(action, teamId, dropId) {
+        const key = claimKey(teamId, dropId);
+        processingClaims.add(key);
+        if (teamState(teamId).pending?.[dropId]) {
+          delete teamState(teamId).pending[dropId];
+          renderAdminControls();
+        }
         if (!API_ENABLED) {
           const teamData = teamState(teamId);
           if (action === "approve") teamData.completed[dropId] = true;
           delete teamData.pending[dropId];
           await saveState();
+          processingClaims.delete(key);
           return;
         }
-        setSaveStatus("Opslaan...");
-        const response = await fetch("api/claim.php", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          credentials: "same-origin",
-          body: JSON.stringify({ action, teamId, dropId }),
-        });
-        const payload = await response.json();
-        if (!payload.ok) throw new Error(payload.error || "Claim update mislukt.");
-        state = migrateState(payload.state);
-        setSaveStatus("Opgeslagen");
-        render();
+        try {
+          setSaveStatus("Opslaan...");
+          const response = await fetch("api/claim.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            credentials: "same-origin",
+            body: JSON.stringify({ action, teamId, dropId }),
+          });
+          const payload = await response.json();
+          if (!payload.ok) throw new Error(payload.error || "Claim update mislukt.");
+          state = migrateState(payload.state);
+          await loadServerState();
+          processingClaims.delete(key);
+          setSaveStatus("Opgeslagen");
+          render();
+        } catch (error) {
+          processingClaims.delete(key);
+          await loadServerState().catch(() => {});
+          render();
+          throw error;
+        }
       }
       function escapeAttr(value) {
         return escapeHtml(value).replace(/"/g, "&quot;");
@@ -2145,6 +2202,13 @@
             .then(render)
             .catch((error) => showError(error.message));
         }
+      });
+
+      document.getElementById("adminTabs").addEventListener("click", (event) => {
+        const tab = event.target.closest("[data-admin-pane]");
+        if (!tab) return;
+        document.querySelectorAll("#adminTabs .tab").forEach((item) => item.classList.toggle("active", item === tab));
+        document.querySelectorAll(".admin-pane").forEach((pane) => pane.classList.toggle("active", pane.id === tab.dataset.adminPane));
       });
 
       document.getElementById("filters").addEventListener("click", (event) => {
